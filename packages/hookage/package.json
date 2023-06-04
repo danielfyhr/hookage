@@ -1,0 +1,14 @@
+{
+  "name": "hookage",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/version.js",
+  "bin": {
+    "hookage": "./src/index.js"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "daniel fyhr"
+  }
+}

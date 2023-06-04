@@ -1,0 +1,20 @@
+{
+  "name": "hookage",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/hookage/src",
+  "projectType": "library",
+  "targets": {
+    "publish": {
+      "command": "node tools/scripts/publish.mjs hookage {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/hookage/**/*.js"]
+      }
+    }
+  },
+  "tags": []
+}
