@@ -1,6 +1,6 @@
 {
   "name": "hookage",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "type": "module",
   "main": "./src/index.js",
   "exports": "./src/version.js",
@@ -9,6 +9,11 @@
   },
   "license": "ISC",
   "author": {
-    "name": "daniel fyhr"
+    "name": "danielfyhr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfyhr/hookage.git",
+    "directory": "packages/hookage"
   }
 }

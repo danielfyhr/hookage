@@ -1,11 +1,16 @@
 {
   "name": "create-hookage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "bin": "src/index.js",
   "license": "ISC",
   "author": {
-    "name": "daniel fyhr"
+    "name": "danielfyhr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfyhr/hookage.git",
+    "directory": "packages/create-hookage"
   },
   "dependencies": {
     "hookage": "*"

@@ -1,13 +1,21 @@
 {
-  "name": "hookage",
-  "version": "0.0.0",
+  "name": "hookage-root",
+  "version": "0.0.2",
   "scripts": {
     "affected:test": "nx affected:test"
   },
   "license": "MIT",
   "author": {
-    "name": "daniel fyhr"
+    "name": "danielfyhr"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfyhr/hookage.git"
+  },
+  "keywords": [
+    "git",
+    "hooks"
+  ],
   "devDependencies": {
     "@nx/eslint-plugin": "16.1.4",
     "@nx/jest": "16.1.4",

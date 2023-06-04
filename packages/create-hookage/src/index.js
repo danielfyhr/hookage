@@ -29,7 +29,7 @@ execSync('git config core.hooksPath .hookage');
 
 console.log('Done!');
 console.log(`Inspect your package.json (${packageJsonPath})`);
-console.log('Run npm install');
+console.log('Run npm install (or yarn or pnpm)');
 
 /**
  *
