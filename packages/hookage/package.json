@@ -1,6 +1,6 @@
 {
   "name": "hookage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "./src/index.js",
   "exports": "./src/version.js",
@@ -15,5 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/danielfyhr/hookage.git",
     "directory": "packages/hookage"
+  },
+  "dependencies": {
+    "tasuku": "^2.0.1"
   }
 }
