@@ -1,5 +1,3 @@
-import { version } from 'hookage';
-
 /**
  * Creates files using the provided package data and package JSON path.
  *
@@ -12,7 +10,7 @@ import { version } from 'hookage';
 export function createFiles(pkg, packageJsonPath) {
   pkg.devDependencies = {
     ...pkg.devDependencies,
-    hookage: `^${version()}`,
+    hookage: `^0.0.4`,
   };
   pkg.scripts = {
     ...pkg.scripts,
@@ -26,10 +24,12 @@ export function createFiles(pkg, packageJsonPath) {
     {
       file: './.hookage/pre-commit',
       content: 'npx hookage pre-commit',
+      mode: 0o0755,
     },
     {
       file: './.hookage/pre-push',
       content: 'npx hookage pre-push',
+      mode: 0o0755,
     },
     {
       file: packageJsonPath,

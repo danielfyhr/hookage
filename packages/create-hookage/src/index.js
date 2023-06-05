@@ -23,7 +23,7 @@ const files = createFiles(pkg, packageJsonPath ?? '');
 console.log('Installing hookage...');
 console.log('Creating files...');
 files.forEach((f) => console.log('📋', f.file));
-files.map(({ file, content }) => writeFile(file, content));
+files.map(({ file, content, mode }) => writeFile(file, content, mode));
 console.log('Configuring git to use hookage...');
 execSync('git config core.hooksPath .hookage');
 
@@ -37,10 +37,10 @@ console.log('Run npm install (or yarn or pnpm)');
  * @param {string} content content of the file
  * @returns {void}
  */
-function writeFile(path, content) {
+function writeFile(path, content, mode) {
   const folderPath = dirname(path);
   if (!existsSync(folderPath)) {
     mkdirSync(folderPath, { recursive: true });
   }
-  writeFileSync(path, content);
+  writeFileSync(path, content, { mode });
 }
