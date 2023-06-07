@@ -16,6 +16,12 @@
     "url": "git+https://github.com/danielfyhr/hookage.git",
     "directory": "packages/hookage"
   },
+  "keywords": [
+    "git",
+    "hooks",
+    "pre-commit",
+    "pre-push"
+  ],
   "dependencies": {
     "tasuku": "^2.0.1"
   }

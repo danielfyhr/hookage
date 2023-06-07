@@ -12,6 +12,12 @@
     "url": "git+https://github.com/danielfyhr/hookage.git",
     "directory": "packages/create-hookage"
   },
+  "keywords": [
+    "git",
+    "hooks",
+    "pre-commit",
+    "pre-push"
+  ],
   "dependencies": {
     "hookage": "*"
   }
