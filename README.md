@@ -2,7 +2,7 @@
 
 Hookage makes it easy to run git hooks
 
-<img src="../../img/hookage-commit.gif">
+![hookage-commit](https://github.com/danielfyhr/hookage/assets/20440888/e8e4792c-0e05-4498-9d70-c03ffb9afb4c)
 
 Add it to your repository with:
 
