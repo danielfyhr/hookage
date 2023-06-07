@@ -1,4 +1,8 @@
-hookage makes it easy to run git hooks
+# Hookage
+
+Hookage makes it easy to run git hooks
+
+![hookage-commit](https://github.com/danielfyhr/hookage/assets/20440888/e8e4792c-0e05-4498-9d70-c03ffb9afb4c)
 
 Add it to your repository with:
 
@@ -6,7 +10,7 @@ Add it to your repository with:
 npx create-hookage@latest
 ```
 
-# The problem
+## The problem
 
 To ensure high code quality, you use automated testing, linting, and other tools.
 
@@ -14,7 +18,7 @@ Automated checks on the CI server are helpful, but have you ever pushed code and
 
 Wouldn't it be good if you could also run the same checks locally without manual effort before pushing code changes?
 
-# The solution
+## The solution
 
 Git has a built-in hook system that allows you to run custom scripts on pre-commit, pre-push, and other events.
 
@@ -23,4 +27,22 @@ This project provides a simplified way to configure and run these hooks. It is b
 - With a simple syntax you can run tasks in parallel or sequentially.
 - A beautiful CLI makes it easy to see what is happening.
 
-Happy hooking!
+## Configuration
+
+In package.json, define your hooks:
+
+```
+  "hookage": {
+    "pre-commit": [
+      "npm run affected:lint",
+      "npm run affected:format"
+    ],
+    "pre-push": [
+      "npm run affected:test"
+    ]
+  }
+```
+
+This will run `npm run affected:lint` and then `npm run affected:format` just before the changes are commited to git.
+
+It will run `npm run affected:test` just before changes are pushed.
