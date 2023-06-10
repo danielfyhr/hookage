@@ -46,3 +46,18 @@ In package.json, define your hooks:
 This will run `npm run affected:lint` and then `npm run affected:format` just before the changes are commited to git.
 
 It will run `npm run affected:test` just before changes are pushed.
+
+### Running tasks in parallel
+
+To run tasks in parallel, use the following syntax:
+
+```
+  "hookage": {
+    "pre-push": {
+      "test": "npm run affected:test",
+      "build": "npm run affected:build"
+    }
+  }
+```
+
+![hookage-push](https://github.com/danielfyhr/hookage/assets/20440888/35000ab3-a33a-41a9-828e-527dcc046f95)
