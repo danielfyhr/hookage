@@ -51,14 +51,9 @@ function groupTasks(task, definition) {
 function createTimedTask(command) {
   return async ({ setStatus }) => {
     const interval = createInterval(setStatus);
-    await delay(1500 + Math.round(Math.random() * 1000));
     await exec(command);
     clearInterval(interval);
   };
-}
-
-async function delay(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }
 
 /**
