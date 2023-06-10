@@ -10,7 +10,7 @@
 export function createFiles(pkg, packageJsonPath) {
   pkg.devDependencies = {
     ...pkg.devDependencies,
-    hookage: `^0.0.6`,
+    hookage: `^0.0.7`,
   };
   pkg.scripts = {
     ...pkg.scripts,
